@@ -12,6 +12,7 @@
 		D400138324BD4648001D429A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400138224BD4648001D429A /* Assets.xcassets */; };
 		D400138624BD4648001D429A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400138524BD4648001D429A /* Preview Assets.xcassets */; };
 		D400138924BD4648001D429A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D400138724BD4648001D429A /* Main.storyboard */; };
+		D400139324BD5A8A001D429A /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400139224BD5A8A001D429A /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D400138824BD4648001D429A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D400138A24BD4648001D429A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D400138B24BD4648001D429A /* Fletch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fletch.entitlements; sourceTree = "<group>"; };
+		D400139224BD5A8A001D429A /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +41,8 @@
 		D400137224BD4646001D429A = {
 			isa = PBXGroup;
 			children = (
-				D400137D24BD4647001D429A /* Fletch */,
+				D400139124BD599E001D429A /* UI */,
+				D400137D24BD4647001D429A /* macOS */,
 				D400137C24BD4647001D429A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,18 +55,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D400137D24BD4647001D429A /* Fletch */ = {
+		D400137D24BD4647001D429A /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				D400137E24BD4647001D429A /* AppDelegate.swift */,
-				D400138024BD4647001D429A /* ContentView.swift */,
 				D400138224BD4648001D429A /* Assets.xcassets */,
 				D400138724BD4648001D429A /* Main.storyboard */,
 				D400138A24BD4648001D429A /* Info.plist */,
 				D400138B24BD4648001D429A /* Fletch.entitlements */,
 				D400138424BD4648001D429A /* Preview Content */,
 			);
-			path = Fletch;
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		D400138424BD4648001D429A /* Preview Content */ = {
@@ -72,6 +74,15 @@
 				D400138524BD4648001D429A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D400139124BD599E001D429A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D400138024BD4647001D429A /* ContentView.swift */,
+				D400139224BD5A8A001D429A /* SliderView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D400138124BD4647001D429A /* ContentView.swift in Sources */,
+				D400139324BD5A8A001D429A /* SliderView.swift in Sources */,
 				D400137F24BD4647001D429A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,14 +293,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Fletch/Fletch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/Fletch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Fletch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = DD983V4X84;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Fletch/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -304,14 +316,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Fletch/Fletch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/Fletch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Fletch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = DD983V4X84;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Fletch/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Sliderview.swift
 //  Fletch
 //
 //  Created by Rob Bishop on 7/13/20.
@@ -8,16 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SliderView: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct SliderView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SliderView()
     }
 }
