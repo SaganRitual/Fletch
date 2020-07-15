@@ -1,28 +1,15 @@
-//
-//  ContentView.swift
-//  Fletch
-//
-//  Created by Rob Bishop on 7/13/20.
-//  Copyright © 2020 Boring Software. All rights reserved.
-//
-
+import SpriteKit
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color.red)
-                .frame(width: 200, height: 200)
+    @EnvironmentObject var lineChartData: LineChartData
 
-            Rectangle()
-                .fill(Color.blue)
-                .frame(width: 100, height: 100)
-                .animation(Animation.default)
-        }
+    var body: some View {
+        HStack {
+            LineChartView().environmentObject(lineChartData)
+        }.frame(width: 600, height: 300)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

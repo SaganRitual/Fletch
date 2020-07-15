@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,15 @@
 		D400138324BD4648001D429A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400138224BD4648001D429A /* Assets.xcassets */; };
 		D400138624BD4648001D429A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400138524BD4648001D429A /* Preview Assets.xcassets */; };
 		D400138924BD4648001D429A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D400138724BD4648001D429A /* Main.storyboard */; };
-		D400139324BD5A8A001D429A /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400139224BD5A8A001D429A /* SliderView.swift */; };
+		D400139824BD7156001D429A /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = D400139724BD7156001D429A /* Charts */; };
+		D400139A24BD7197001D429A /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400139924BD7197001D429A /* LineChartView.swift */; };
+		D4E0411324BFE87C0026970F /* LineChartCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E0411224BFE87C0026970F /* LineChartCore.swift */; };
+		D4FE3F8A24BEB9A60055D095 /* ChartLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F8924BEB9A60055D095 /* ChartLegend.swift */; };
+		D4FE3F8C24BEBAD10055D095 /* ChartLegendoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F8B24BEBAD10055D095 /* ChartLegendoid.swift */; };
+		D4FE3F9424BED7720055D095 /* Cbuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F9324BED7720055D095 /* Cbuffer.swift */; };
+		D4FE3F9624BED7AD0055D095 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F9524BED7AD0055D095 /* Debug.swift */; };
+		D4FE3F9924BED7E20055D095 /* Arkonia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F9824BED7E20055D095 /* Arkonia.swift */; };
+		D4FE3F9B24BED8060055D095 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F9A24BED8060055D095 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +32,14 @@
 		D400138824BD4648001D429A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D400138A24BD4648001D429A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D400138B24BD4648001D429A /* Fletch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fletch.entitlements; sourceTree = "<group>"; };
-		D400139224BD5A8A001D429A /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		D400139924BD7197001D429A /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		D4E0411224BFE87C0026970F /* LineChartCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCore.swift; sourceTree = "<group>"; };
+		D4FE3F8924BEB9A60055D095 /* ChartLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLegend.swift; sourceTree = "<group>"; };
+		D4FE3F8B24BEBAD10055D095 /* ChartLegendoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLegendoid.swift; sourceTree = "<group>"; };
+		D4FE3F9324BED7720055D095 /* Cbuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cbuffer.swift; sourceTree = "<group>"; };
+		D4FE3F9524BED7AD0055D095 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		D4FE3F9824BED7E20055D095 /* Arkonia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arkonia.swift; sourceTree = "<group>"; };
+		D4FE3F9A24BED8060055D095 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D400139824BD7156001D429A /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +57,11 @@
 		D400137224BD4646001D429A = {
 			isa = PBXGroup;
 			children = (
+				D4FE3F9724BED7D80055D095 /* Arkonia */,
+				D4FE3F9224BED7590055D095 /* Miscellany */,
 				D400139124BD599E001D429A /* UI */,
 				D400137D24BD4647001D429A /* macOS */,
+				D4FE3F8D24BEC9130055D095 /* SpriteKit */,
 				D400137C24BD4647001D429A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,10 +98,38 @@
 		D400139124BD599E001D429A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D4FE3F8924BEB9A60055D095 /* ChartLegend.swift */,
+				D4FE3F8B24BEBAD10055D095 /* ChartLegendoid.swift */,
 				D400138024BD4647001D429A /* ContentView.swift */,
-				D400139224BD5A8A001D429A /* SliderView.swift */,
+				D4E0411224BFE87C0026970F /* LineChartCore.swift */,
+				D400139924BD7197001D429A /* LineChartView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		D4FE3F8D24BEC9130055D095 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		D4FE3F9224BED7590055D095 /* Miscellany */ = {
+			isa = PBXGroup;
+			children = (
+				D4FE3F9324BED7720055D095 /* Cbuffer.swift */,
+				D4FE3F9524BED7AD0055D095 /* Debug.swift */,
+				D4FE3F9A24BED8060055D095 /* Extensions.swift */,
+			);
+			path = Miscellany;
+			sourceTree = "<group>";
+		};
+		D4FE3F9724BED7D80055D095 /* Arkonia */ = {
+			isa = PBXGroup;
+			children = (
+				D4FE3F9824BED7E20055D095 /* Arkonia.swift */,
+			);
+			path = Arkonia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +148,9 @@
 			dependencies = (
 			);
 			name = Fletch;
+			packageProductDependencies = (
+				D400139724BD7156001D429A /* Charts */,
+			);
 			productName = Fletch;
 			productReference = D400137B24BD4647001D429A /* Fletch.app */;
 			productType = "com.apple.product-type.application";
@@ -112,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Boring Software";
 				TargetAttributes = {
 					D400137A24BD4647001D429A = {
@@ -129,6 +179,9 @@
 				Base,
 			);
 			mainGroup = D400137224BD4646001D429A;
+			packageReferences = (
+				D400139624BD7156001D429A /* XCRemoteSwiftPackageReference "swiftui-charts" */,
+			);
 			productRefGroup = D400137C24BD4647001D429A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,9 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FE3F9424BED7720055D095 /* Cbuffer.swift in Sources */,
+				D4FE3F9924BED7E20055D095 /* Arkonia.swift in Sources */,
 				D400138124BD4647001D429A /* ContentView.swift in Sources */,
-				D400139324BD5A8A001D429A /* SliderView.swift in Sources */,
 				D400137F24BD4647001D429A /* AppDelegate.swift in Sources */,
+				D4FE3F9B24BED8060055D095 /* Extensions.swift in Sources */,
+				D4FE3F8C24BEBAD10055D095 /* ChartLegendoid.swift in Sources */,
+				D4FE3F9624BED7AD0055D095 /* Debug.swift in Sources */,
+				D4E0411324BFE87C0026970F /* LineChartCore.swift in Sources */,
+				D400139A24BD7197001D429A /* LineChartView.swift in Sources */,
+				D4FE3F8A24BEB9A60055D095 /* ChartLegend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +262,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -262,6 +323,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -294,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = macOS/Fletch.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
@@ -317,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = macOS/Fletch.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
@@ -357,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D400139624BD7156001D429A /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D400139724BD7156001D429A /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D400139624BD7156001D429A /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D400137324BD4646001D429A /* Project object */;
 }
