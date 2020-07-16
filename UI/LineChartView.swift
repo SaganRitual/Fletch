@@ -10,7 +10,7 @@ struct LineChartView: View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    ChartLegend(descriptors: [
+                    ChartLegend(groupName: "Current", descriptors: [
                         (Color.blue, "Current Maximum"),
                         (Color.green, "Current Average"),
                         (Color(NSColor.cyan), "Current Median")
@@ -22,7 +22,7 @@ struct LineChartView: View {
                 Spacer()
 
                 VStack(alignment: .leading) {
-                    ChartLegend(descriptors: [
+                    ChartLegend(groupName: "All-time", descriptors: [
                         (Color.purple, "All-time Maximum"),
                         (Color.red, "All-time Average"),
                         (Color.yellow, "All-time Median")
@@ -47,24 +47,24 @@ struct LineChartView: View {
                     Rectangle().foregroundColor(.clear).frame(width: 20, height: 10)
 
                     ZStack {
-//                        Chart(data: lineChartData.theData[0])
-//                            .chartStyle(
-//                                LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 2)
-//                            )
-//                            .padding()
-//
-//                        Chart(data: lineChartData.theData[1])
-//                            .chartStyle(
-//                                LineChartStyle(.quadCurve, lineColor: .green, lineWidth: 2)
-//                            )
-//                            .padding()
-//
-//                        Chart(data: lineChartData.theData[2])
-//                            .chartStyle(
-//                                LineChartStyle(.quadCurve, lineColor: Color(NSColor.cyan), lineWidth: 2)
-//                            )
-//                            .padding()
-//
+                        Chart(data: lineChartData.theData[0])
+                            .chartStyle(
+                                LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 2)
+                            )
+                            .padding()
+
+                        Chart(data: lineChartData.theData[1])
+                            .chartStyle(
+                                LineChartStyle(.quadCurve, lineColor: .green, lineWidth: 2)
+                            )
+                            .padding()
+
+                        Chart(data: lineChartData.theData[2])
+                            .chartStyle(
+                                LineChartStyle(.quadCurve, lineColor: Color(NSColor.cyan), lineWidth: 2)
+                            )
+                            .padding()
+
                         Chart(data: lineChartData.theData[3])
                             .chartStyle(
                                 LineChartStyle(.quadCurve, lineColor: .purple, lineWidth: 2)
