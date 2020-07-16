@@ -2,8 +2,8 @@ import SwiftUI
 
 class LineChartData: ObservableObject {
     @Published var updateTrigger = 0
+    @Published var theData = [Cbuffer<Double>]()
 
-    var theData = [Cbuffer<Double>]()
     var timer: Timer?
 
     init(_ cDataSets: Int) {
@@ -19,9 +19,7 @@ class LineChartData: ObservableObject {
     }
 
     func update(_: Timer) {
-        theData.forEach { cBuffer in
-            (0..<5).forEach { _ in cBuffer.put(Double.random(in: 0..<1)) }
-        }
+        theData.forEach { cBuffer in cBuffer.put(Double.random(in: 0..<1)) }
 
         updateTrigger += 1
     }

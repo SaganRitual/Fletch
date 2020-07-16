@@ -1,15 +1,15 @@
 enum CBufferMode { case fifo, putOnlyRing }
 
 class Cbuffer<T: BinaryFloatingPoint>: RandomAccessCollection {
-    func index(after i: Int) -> Int { i + 1 }
+    func index(after i: Int) -> Int { (i + 1) % cElements }
 
     subscript(position: Int) -> T {
         get { return self.elements[position]! }
         set { fatalError() }
     }
 
-    var startIndex: Int = 0
-    var endIndex: Int
+    var startIndex: Int { nextPushOffset }
+    var endIndex: Int { startIndex }
 
     typealias Index = Int
 
@@ -39,7 +39,6 @@ class Cbuffer<T: BinaryFloatingPoint>: RandomAccessCollection {
 
     init(cElements: Int, mode: CBufferMode = .fifo) {
         self.cElements = cElements
-        self.endIndex = cElements
         self.mode = mode
 
         elements = []
@@ -92,5 +91,7 @@ class Cbuffer<T: BinaryFloatingPoint>: RandomAccessCollection {
     func put(_ element: T) {
         hardAssert(mode == .putOnlyRing) { "hardAssert at \(#file):\(#line)" }
         put_(element)
+
+        nextPushOffset = (nextPushOffset + 1) % cElements
     }
 }
