@@ -15,6 +15,8 @@
 		D400139824BD7156001D429A /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = D400139724BD7156001D429A /* Charts */; };
 		D400139A24BD7197001D429A /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400139924BD7197001D429A /* LineChartView.swift */; };
 		D4E0411324BFE87C0026970F /* LineChartCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E0411224BFE87C0026970F /* LineChartCore.swift */; };
+		D4F6634924BFFE92006B95BF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6634824BFFE92006B95BF /* GameScene.swift */; };
+		D4F663A624C088C4006B95BF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F663A524C088C4006B95BF /* GameView.swift */; };
 		D4FE3F8A24BEB9A60055D095 /* ChartLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F8924BEB9A60055D095 /* ChartLegend.swift */; };
 		D4FE3F8C24BEBAD10055D095 /* ChartLegendoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F8B24BEBAD10055D095 /* ChartLegendoid.swift */; };
 		D4FE3F9424BED7720055D095 /* Cbuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE3F9324BED7720055D095 /* Cbuffer.swift */; };
@@ -34,6 +36,8 @@
 		D400138B24BD4648001D429A /* Fletch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fletch.entitlements; sourceTree = "<group>"; };
 		D400139924BD7197001D429A /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		D4E0411224BFE87C0026970F /* LineChartCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCore.swift; sourceTree = "<group>"; };
+		D4F6634824BFFE92006B95BF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D4F663A524C088C4006B95BF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		D4FE3F8924BEB9A60055D095 /* ChartLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLegend.swift; sourceTree = "<group>"; };
 		D4FE3F8B24BEBAD10055D095 /* ChartLegendoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLegendoid.swift; sourceTree = "<group>"; };
 		D4FE3F9324BED7720055D095 /* Cbuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cbuffer.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				D4FE3F8924BEB9A60055D095 /* ChartLegend.swift */,
 				D4FE3F8B24BEBAD10055D095 /* ChartLegendoid.swift */,
 				D400138024BD4647001D429A /* ContentView.swift */,
+				D4F663A524C088C4006B95BF /* GameView.swift */,
 				D4E0411224BFE87C0026970F /* LineChartCore.swift */,
 				D400139924BD7197001D429A /* LineChartView.swift */,
 			);
@@ -110,6 +115,7 @@
 		D4FE3F8D24BEC9130055D095 /* SpriteKit */ = {
 			isa = PBXGroup;
 			children = (
+				D4F6634824BFFE92006B95BF /* GameScene.swift */,
 			);
 			path = SpriteKit;
 			sourceTree = "<group>";
@@ -214,10 +220,12 @@
 				D400138124BD4647001D429A /* ContentView.swift in Sources */,
 				D400137F24BD4647001D429A /* AppDelegate.swift in Sources */,
 				D4FE3F9B24BED8060055D095 /* Extensions.swift in Sources */,
+				D4F6634924BFFE92006B95BF /* GameScene.swift in Sources */,
 				D4FE3F8C24BEBAD10055D095 /* ChartLegendoid.swift in Sources */,
 				D4FE3F9624BED7AD0055D095 /* Debug.swift in Sources */,
 				D4E0411324BFE87C0026970F /* LineChartCore.swift in Sources */,
 				D400139A24BD7197001D429A /* LineChartView.swift in Sources */,
+				D4F663A624C088C4006B95BF /* GameView.swift in Sources */,
 				D4FE3F8A24BEB9A60055D095 /* ChartLegend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

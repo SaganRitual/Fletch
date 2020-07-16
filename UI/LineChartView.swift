@@ -47,24 +47,24 @@ struct LineChartView: View {
                     Rectangle().foregroundColor(.clear).frame(width: 20, height: 10)
 
                     ZStack {
-                        Chart(data: lineChartData.theData[0])
-                            .chartStyle(
-                                LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 2)
-                            )
-                            .padding()
-
-                        Chart(data: lineChartData.theData[1])
-                            .chartStyle(
-                                LineChartStyle(.quadCurve, lineColor: .green, lineWidth: 2)
-                            )
-                            .padding()
-
-                        Chart(data: lineChartData.theData[2])
-                            .chartStyle(
-                                LineChartStyle(.quadCurve, lineColor: Color(NSColor.cyan), lineWidth: 2)
-                            )
-                            .padding()
-
+//                        Chart(data: lineChartData.theData[0])
+//                            .chartStyle(
+//                                LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 2)
+//                            )
+//                            .padding()
+//
+//                        Chart(data: lineChartData.theData[1])
+//                            .chartStyle(
+//                                LineChartStyle(.quadCurve, lineColor: .green, lineWidth: 2)
+//                            )
+//                            .padding()
+//
+//                        Chart(data: lineChartData.theData[2])
+//                            .chartStyle(
+//                                LineChartStyle(.quadCurve, lineColor: Color(NSColor.cyan), lineWidth: 2)
+//                            )
+//                            .padding()
+//
                         Chart(data: lineChartData.theData[3])
                             .chartStyle(
                                 LineChartStyle(.quadCurve, lineColor: .purple, lineWidth: 2)

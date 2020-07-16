@@ -5,9 +5,7 @@ struct ContentView: View {
     @EnvironmentObject var lineChartData: LineChartData
 
     var body: some View {
-        HStack {
-            LineChartView().environmentObject(lineChartData)
-        }.frame(width: 600, height: 300)
+        GameView(scene: GameScene())
     }
 }
 

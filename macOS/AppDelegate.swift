@@ -14,19 +14,38 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
-    let lineChartData = LineChartData(6)
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Count initial frame
+        let newFrame: NSRect
+        let aspectRatioOfRobsMacbookPro: CGFloat = 2880 / 1800
+        if let screenFrame = NSScreen.main?.visibleFrame {
+            // We got the screen dimensions, count the frame from them
+            // visibleFrame is the screen size excluding menu bar (on top of the screen)
+            // and dock (by default on bottom)
+            let newWidth = screenFrame.width * 0.7
+            let newHeight = newWidth / aspectRatioOfRobsMacbookPro
+            let newSize = NSSize(width: newWidth, height: newHeight)
+
+            let newOrigin = CGPoint(x: screenFrame.origin.x + (screenFrame.width  - newSize.width),
+                                    y: screenFrame.origin.y + (screenFrame.height - newSize.height))
+            newFrame = NSRect(origin: newOrigin, size: newSize)
+        } else {
+            // We have no clue about scren dimensions, set static size
+            newFrame = NSRect(origin: NSPoint(x: 50, y: 100), size: NSSize(width: 1500, height: 850))
+        }
+
         // Create the SwiftUI view that provides the window contents.
-        let contentView = LineChartView().environmentObject(lineChartData)
+        let contentView = ContentView()
 
         // Create the window and set the content view. 
         window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+            contentRect: newFrame,
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
+            backing: .buffered, defer: false
+        )
+
         window.center()
-        window.setFrameAutosaveName("Main Window")
+        window.setFrameAutosaveName("Arkonia")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
     }
