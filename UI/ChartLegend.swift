@@ -1,21 +1,26 @@
-//
-//  ChartLegend.swift
-//  Fletch
-//
-//  Created by Rob Bishop on 7/14/20.
-//  Copyright © 2020 Boring Software. All rights reserved.
-//
-
 import SwiftUI
 
 struct ChartLegend: View {
     let groupName: String
     let descriptors: [(Color, String)]
 
+    @State private var isShowingTop = true
+    @State private var isShowingMiddle = false
+    @State private var isShowingBottom = true
+
+    func buttonClicked(_ buttonSS: Int) {
+        switch buttonSS {
+        case 0: isShowingTop.toggle()
+        case 1: isShowingMiddle.toggle()
+        case 2: isShowingBottom.toggle()
+        default: fatalError()
+        }
+    }
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(groupName)
-                .font(.body)
+                .font(.headline)
                 .padding(.top, 5)
                 .padding(.bottom, -10)
                 .padding(.leading, 10)
@@ -23,18 +28,25 @@ struct ChartLegend: View {
             HStack {
                 VStack {
                     ForEach(0..<descriptors.count) { ss in
-                        Rectangle()
-                            .foregroundColor(self.descriptors[ss].0)
-                            .frame(width: 100, height: 10)
+                        Button(action: { buttonClicked(ss) }) {
+                            Rectangle()
+                                .foregroundColor(self.descriptors[ss].0)
+                                .frame(width: 100, height: 10)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
 
                 VStack(alignment: .trailing) {
                     ForEach(0..<descriptors.count) { ss in
-                        Text(self.descriptors[ss].1).font(.subheadline)
+                        Text(self.descriptors[ss].1)
+                            .font(.subheadline)
                     }
                 }
-            }.padding(.leading, 10).padding(.trailing, 10)
+            }
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
+            .padding(.bottom, 5)
         }
     }
 }
@@ -44,9 +56,9 @@ struct ChartLegend_Previews: PreviewProvider {
         ChartLegend(
             groupName: "Current",
             descriptors: [
-                (Color.blue, "Maximum"),
                 (Color.green, "Average"),
-                (Color(NSColor.cyan), "Median")
+                (Color(NSColor.cyan), "Median"),
+                (Color.blue, "Maximum")
             ]
         )
     }

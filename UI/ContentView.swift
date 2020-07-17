@@ -47,7 +47,6 @@ struct ContentView: View {
                                     Text(buttonLabels[labelSS]).frame(minWidth: 75)
                                 }
                                 .foregroundColor(.black)
-//                                .buttonStyle(BorderedButtonStyle())
                             }
                         }
                     }.padding(.leading)
